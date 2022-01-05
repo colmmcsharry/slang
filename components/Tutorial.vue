@@ -1,8 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div>
- <NuxtLogo />
- loolocaust
+  <div class="main_content">
+ this is the main content
   </div>
 </template>
 
@@ -13,3 +12,13 @@ export default {
   name: 'NuxtTutorial',
 }
 </script>
+
+<style scoped>
+.main_content {
+  display:block;
+  height:700px;
+  width:100%;
+  background-color: blanchedalmond;
+  position:relative;
+}
+</style>
