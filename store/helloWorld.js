@@ -2,7 +2,7 @@
 
 // state
 export const state = () => ({
-    users: []
+    counter: 0
 })
 
 
@@ -33,8 +33,7 @@ export const actions = {
 
 // mutations
 export const mutations = {
-    addUsers(state, users){
-        state.users.push({...users})
-        // ... spread operator adds all of the users to the state
+    increment(state) {
+        state.counter++
     }
 }
