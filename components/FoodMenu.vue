@@ -1,6 +1,10 @@
 <template lang="pug">
     div.container
         h1.myheading Menu
+
+        input.discount(type='checkbox' name="discount") 
+        label(for="discount") Click here to avail of a 10% Discount!
+        
         
         .item(v-for="(item,index) in MenuItems")
           p {{ `${item.name} - ${item.cost}`}}
@@ -8,7 +12,7 @@
             //- ${index} might have to include this back in just before the - in between item.name and item.cost
         br
         .your-items
-          h2 Your Items
+          h2.carthead Your Items
           .item(v-for="item in cartItems")
             p.inlinep {{ item.name }}
             button.inlinebut(@click="removeItem(item)") remove item
@@ -75,6 +79,7 @@ methods: {
 </script>
 
 <style scoped>
+
 .bold{font-weight: bold;
 position:absolute;
 bottom: 5px}
@@ -84,12 +89,18 @@ bottom: 5px}
   position:relative;
 }
 
+.carthead {margin-bottom:15px;}
+
 .your-items {
   display:block;
   height:300px;
   width:300px;
   border:1px solid rgb(61, 61, 61);
   position:relative;
+}
+
+.discount {
+  margin:90px 0px;
 }
 
 h2 {margin: 0 auto;

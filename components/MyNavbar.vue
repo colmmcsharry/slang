@@ -1,13 +1,13 @@
-<template>
-    <div class="navbar">
-      <NuxtLink to="/">  My Logo </NuxtLink>
-        <ul> 
-          <NuxtLink to="about">  <li>About</li> </NuxtLink>
-          <NuxtLink to="menu">  <li>Menu</li> </NuxtLink>
-          <NuxtLink to="contact">  <li>Contact</li> </NuxtLink>
-          <NuxtLink to="task-board">  <li>Taskboard</li> </NuxtLink>
-          </ul>
-    </div>
+<template lang="pug">
+.navbar
+  Nuxtlink.logo(to='/')   My Logo 
+  ul
+    Nuxtlink(to='about')
+      li About
+    Nuxtlink(to='contact')
+      li Contact
+    Nuxtlink(to='task-board')
+      li Taskboard
 </template>
 
 
@@ -18,7 +18,9 @@
  border:1px solid gray;
   align-items:flex-end;
   justify-content: space-between;
-  background-color:rgb(48, 48, 48)
+  background-color:rgb(48, 48, 48);
+  color:lightblue;
+  font-family: Cursive;
 }
 
 ul {
@@ -26,6 +28,15 @@ ul {
      display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-bottom:10px;
+  margin-right:10px;
+}
+
+.logo {
+   color:lightblue;
+   border: 1px solid lightgray;
+   border-radius:50%;
+   padding:10px;
 }
 
 li {margin:0px 10px;
