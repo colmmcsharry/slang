@@ -1,20 +1,18 @@
 <template>
 
   <div class="container">
-  <MyComponent />
+  <FoodMenu />
   </div>
 </template>
 
 <script>
-import MyComponent from '../components/MyComponent.vue'
+import FoodMenu from '../components/FoodMenu.vue'
 
 export default {
   name: 'IndexPage',
   components: {
-    MyComponent
-  },
-  layout: 'My-Layout'
-  
+    FoodMenu
+  }
 }
 </script>
 

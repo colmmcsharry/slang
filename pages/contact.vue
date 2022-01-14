@@ -8,6 +8,5 @@
 
 export default {
   name: 'ContactPage',
-  layout: 'My-Layout'
 }
 </script>

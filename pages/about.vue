@@ -7,7 +7,6 @@
 
 
 export default {
-  name: 'AboutPage',
-  layout: 'My-Layout'
+  name: 'AboutPage'
 }
 </script>

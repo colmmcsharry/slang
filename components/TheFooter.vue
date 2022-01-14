@@ -1,7 +1,7 @@
 <template>
     <div class="myfooter">  
 
-This is the footer
+Footer
 
     </div>   
 </template>
@@ -10,5 +10,10 @@ This is the footer
 
 .myfooter {
     border:1px solid black;
+    background-color:rgb(48, 48, 48);
+    color:white;
+    position:fixed;
+    bottom:0px;
+    width:100%;
 }
 </style>
