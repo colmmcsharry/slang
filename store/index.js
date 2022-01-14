@@ -1,18 +1,13 @@
 export const state = () => ({
 	tasks: [],
 	counter: 0,
-	cartItems:[ {
-		name:'chicken',
-		cost:10
-	}
-	]
+	cartItems:[]
 })
 
 export const mutations = {
 	
 	ADDTOCART(state, item) {
 		state.cartItems = [ item, ...state.cartItems];
-		console.log('lool');
 	},
 	REMOVEITEM(state, item) {
 		state.cartItems.splice(state.cartItems.indexOf(item), 1);

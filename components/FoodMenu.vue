@@ -2,7 +2,7 @@
     div.container
         h1.myheading Menu
 
-        input.discount(type='checkbox' name="discount") 
+        input.discount(click="myalert" type='checkbox' name="discount") 
         label(for="discount") Click here to avail of a 10% Discount!
         
         
@@ -60,7 +60,7 @@ computed: {
         totalCost += item.cost;
       });
       return totalCost;
-    }
+    },
   },  
 methods: {
         // this just connects to the store, tells it which file to commit the increment function to
@@ -72,7 +72,8 @@ methods: {
         },
         increment(){
           this.$store.commit('INCREMENT')
-        }
+        },
+        
     }
 
 }
