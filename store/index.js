@@ -24,9 +24,7 @@ export const mutations = {
 		task.done = !task.done;
 	},
 	// todo list ends 
-
 	INCREMENT(state) {
 		state.counter++ 
 	}
-	
 }

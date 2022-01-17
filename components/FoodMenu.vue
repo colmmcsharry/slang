@@ -2,10 +2,6 @@
     div.container
         h1.myheading Menu
 
-        input.discount(click="myalert" type='checkbox' name="discount") 
-        label(for="discount") Click here to avail of a 10% Discount!
-        
-        
         .item(v-for="(item,index) in MenuItems")
           p {{ `${item.name} - ${item.cost}`}}
             button.inlinebut(@click="addToCart(item)") add item
@@ -16,7 +12,12 @@
           .item(v-for="item in cartItems")
             p.inlinep {{ item.name }}
             button.inlinebut(@click="removeItem(item)") remove item
-          p.bold Total Cost: {{ cartItemsCost }}     
+          p.bold Total Cost: {{ cartItemsCost }} 
+          .withdiscount(v-if="!isHidden") With Discount {{ cartItemsCost - cartItemsCost / 100 * 10 }} 
+
+        input.discount(@click="myalter;isHidden = !isHidden" type='checkbox' name="discount") 
+        label(for="discount") Click here to avail of a 10% Discount!   
+        
           //-  need to add remove button beside each item that gets added, and it removes the one at that index
 </template>
 
@@ -40,7 +41,8 @@ export default {
           cost:8,
         }
       ],
-      myvariable:'haha'
+      myvariable:'haha',
+      isHidden: true
     }
   },
 computed: {
@@ -73,9 +75,10 @@ methods: {
         increment(){
           this.$store.commit('INCREMENT')
         },
-        
+        myalter () {
+        return  alert('lol')
+        },
     }
-
 }
 </script>
 
@@ -83,7 +86,7 @@ methods: {
 
 .bold{font-weight: bold;
 position:absolute;
-bottom: 5px}
+bottom: 25px}
 
 .myheading {
   margin: 2rem auto;
@@ -100,8 +103,13 @@ bottom: 5px}
   position:relative;
 }
 
+.withdiscount {
+  position:absolute;
+  bottom:1px;
+}
+
 .discount {
-  margin:90px 0px;
+  margin:30px 0px;
 }
 
 h2 {margin: 0 auto;
