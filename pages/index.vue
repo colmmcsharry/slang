@@ -22,6 +22,9 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.6;
   background: lightpink;
+  background-image:url('../assets/terenureinn.jpeg');
+  background-size:cover;
+
 }
 .container {
   max-width: 1100px;
