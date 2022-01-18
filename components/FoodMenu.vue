@@ -2,18 +2,17 @@
     div.container
         h1.myheading Menu
 
-        .item(v-for="(item,index) in MenuItems")
-          p {{ `${item.name} - ${item.cost}`}}
+        .item(v-for="(item) in MenuItems")
+          p {{ `${item.name} - €${item.cost}`}}
             button.inlinebut(@click="addToCart(item)") add item
-            //- ${index} might have to include this back in just before the - in between item.name and item.cost
         br
         .your-items
           h2.carthead Your Items
           .item(v-for="item in cartItems")
             p.inlinep {{ item.name }}
             button.inlinebut(@click="removeItem(item)") remove item
-          p.bold Total Cost: {{ cartItemsCost }} 
-          .withdiscount(v-if="!isHidden") With Discount {{ cartItemsCost - cartItemsCost / 100 * 10 }} 
+          p.bold Total Cost: €{{ cartItemsCost }} 
+          .withdiscount(v-if="!isHidden") With Discount: €{{ cartItemsCost - cartItemsCost / 100 * 10 }} 
 
         input.discount(@click="myalter;isHidden = !isHidden" type='checkbox' name="discount") 
         label(for="discount") Click here to avail of a 10% Discount!   
@@ -41,7 +40,6 @@ export default {
           cost:8,
         }
       ],
-      myvariable:'haha',
       isHidden: true
     }
   },

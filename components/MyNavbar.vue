@@ -1,12 +1,12 @@
 <template lang="pug">
 .navbar
-  Nuxtlink.logo(to='/')   My Logo 
+  NuxtLink.logo(to='/')   My Logo 
   ul
-    Nuxtlink(to='about')
+    NuxtLink(to='about')
       li About
-    Nuxtlink(to='contact')
+    NuxtLink(to='contact')
       li Contact
-    Nuxtlink(to='task-board')
+    NuxtLink(to='task-board')
       li Taskboard
 </template>
 
@@ -21,6 +21,7 @@
   background-color:rgb(48, 48, 48);
   color:lightblue;
   font-family: Cursive;
+  
 }
 
 ul {
@@ -37,6 +38,7 @@ ul {
    border: 1px solid lightgray;
    border-radius:50%;
    padding:10px;
+
 }
 
 li {margin:0px 10px;
