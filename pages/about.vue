@@ -1,12 +1,30 @@
-<template>
+<template lang="pug">
+  .container
+    CaptionedContent
+        template(#content)
+          img(src='https://i.imgur.com/EJOjIMC.jpeg')
+        template(#caption)
+          p hellloooo
+      
+    CaptionedContent
+        template(#content)
+          p this is going in instead of image in this instance
+        template(#caption)
+          p some other text  
 
-  <div>this is the about page</div>
+         
+
 </template>
 
 <script>
-
+import FoodMenu from '../components/FoodMenu.vue'
+import CaptionedContent from '../components/CaptionedContent.vue'
 
 export default {
-  name: 'AboutPage'
+  name: 'AboutPage',
+  components: {
+    FoodMenu,
+    CaptionedContent,
+  },
 }
 </script>

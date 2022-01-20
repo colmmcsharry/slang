@@ -1,41 +1,48 @@
-<template>
-  <main>
-    <h1>Task Board</h1>
-    <p>Create a list of tasks</p>
+<template lang="pug">
+  main
+    h1 Task Board
+    p Create a list of tasks
 
-    <div class="create-new">
-      <input 
+    .create-new
+      input(
         v-model="newTask" 
         type="text" 
         placeholder="Add a new task" 
-        @keypress.enter="addTask" />
-      <button @click="addTask">Add</button>
-    </div>
+        @keypress.enter="addTask")
+      button(@click="addTask") Add
+    
 
-    <div class="tasks">
-      <SingleTask
+    .tasks
+      SingleTask(
         v-for="(task, i) in $store.state.tasks"
         :key="i"
-        :task="task" />
-    </div>
-
-  </main>
+        :task="task")
+    
 </template>
 
 <script>
 export default {
-  data (){
+  data() {
     return {
-      newTask: ''
+      newTask: '',
     }
   },
   methods: {
-    addTask () {
+    addTask() {
       if (this.newTask) {
-        this.$store.commit('ADD_TASK', this.newTask);
-        this.newTask = '';
+        this.$store.commit('ADD_TASK', this.newTask)
+        this.newTask = ''
       }
-    }
-  }
+    },
+  },
 }
 </script>
+
+<style scoped>
+h1 {
+  color: white;
+}
+p {
+  color: white;
+}
+</style>
