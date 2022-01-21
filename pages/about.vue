@@ -1,9 +1,9 @@
 <template lang="pug">
   .container
     CaptionedContent
-        template(#content)
+        template(slot="content")
           img(src='https://i.imgur.com/EJOjIMC.jpeg')
-        template(#caption)
+        template(slot="caption")
           p hellloooo
       
     CaptionedContent
