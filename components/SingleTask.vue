@@ -23,4 +23,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.content {
+  color:white;
+}
+</style>

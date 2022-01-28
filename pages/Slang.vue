@@ -1,11 +1,12 @@
 <template lang="pug">
   div
     b-dropdown#dropdown-1.m-md-2(text='Irish Phrases')
-      b-dropdown-item(@click="showGreetings=true") Greetings
-      b-dropdown-item(@click="showSwears=true") Swears
+      b-dropdown-item(@click="lolfunction") Greetings
+      //- b-dropdown-item(@click="myclick=swears") Swears
       b-dropdown-item Miscelleanous
 
-    MyQuote(v-if="showGreetings || showSwears")
+
+
   //- this is temporary, need to change it so it loads the quotes component with only the appropriate data
 
 </template>
@@ -21,13 +22,22 @@ export default {
   name: 'SlangPage',
 
   data() {
-    return { myvariable: 'hehehe', showGreetings: false, showSwears: false }
+    return {
+      myvariable: 'random text',
+      showGreetings: false,
+      showSwears: false,
+    }
   },
 
   computed: {
     state() {
       return this.$store.state
     },
+    lolfunction(){
+     return () => {
+     alert('lol')
+     }
+    }
   },
 }
 </script>
@@ -35,7 +45,7 @@ export default {
 <style>
 .container {
   width: 800px;
-  border: 2px solid red;
+  border: 2px solid lightgray;
   color: white;
 }
 

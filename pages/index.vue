@@ -1,12 +1,6 @@
 <template lang="pug">
   .container
     FoodMenu 
-    
-
-        
-
-
-  </div>
 </template>
 
 <script>
@@ -36,7 +30,7 @@ body {
 }
 
 .notherdiv {
-  margin: 2px solid red;
+  margin: 2px solid white;
   position: relative;
   height: 200px;
   display: block;
