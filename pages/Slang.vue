@@ -1,13 +1,11 @@
 <template lang="pug">
   div
-    b-dropdown#dropdown-1.m-md-2(text='Irish Phrases')
-      b-dropdown-item(@click="lolfunction") Greetings
-      //- b-dropdown-item(@click="myclick=swears") Swears
-      b-dropdown-item Miscelleanous
+    b-dropdown#dropdown-1.m-md-2.mydropdown(text='Irish Phrases')
+      b-dropdown-item(@click="makeGreetings") Greetings
+      b-dropdown-item(@click="makeSwears") Swears
+      b-dropdown-item(@click="makeMisc")  Miscelleanous
 
-
-
-  //- this is temporary, need to change it so it loads the quotes component with only the appropriate data
+    MyQuote
 
 </template>
 
@@ -24,9 +22,7 @@ export default {
   data() {
     return {
       myvariable: 'random text',
-      showGreetings: false,
-      showSwears: false,
-    }
+      showSwears: false,    }
   },
 
   computed: {
@@ -37,8 +33,19 @@ export default {
      return () => {
      alert('lol')
      }
-    }
+    },
   },
+  methods: {
+    makeGreetings() {
+        this.$store.commit('MAKEGREETINGS')
+    },
+    makeSwears() {
+        this.$store.commit('MAKESWEARS')
+    },
+    makeMisc() {
+        this.$store.commit('MAKEMISC')
+    }
+  }
 }
 </script>
 
@@ -47,6 +54,16 @@ export default {
   width: 800px;
   border: 2px solid lightgray;
   color: white;
+}
+
+.mydropdown {
+  margin:3rem;
+  position:relative;
+  padding:2rem;
+}
+
+#dropdown-1{
+    font-size:40px !important;
 }
 
 p {

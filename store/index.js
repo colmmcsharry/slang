@@ -2,16 +2,19 @@ export const state = () => ({
   tasks: [],
   counter: 0,
   cartItems: [],
+  category: '',
   greetingQuotes: [
     {
       id: 1,
       buttonTitle: "What's the craic",
       explanation: "This is how we ask each other how we're doing",
+      example: "Oh hello David, what's the craic?"
     },
     {
       id: 2,
       buttonTitle: 'Story horse',
       explanation: 'This is how we ask each other what is up',
+      example: " Ah Frank! What's the story horse?"
     },
   ],
   swearQuotes: [
@@ -19,16 +22,41 @@ export const state = () => ({
       id: 1,
       buttonTitle: 'feck',
       explanation: 'a less harsh version of the F word',
+      example: 'Ah feck, I forgot the football was on tonight'
     },
     {
       id: 2,
       buttonTitle: 'bollocks',
       explanation: 'Usually uttered when something very bad happens',
+      example: 'Ah bollocks, I dropped my phone into the bath'
+    },
+  ],
+  miscQuotes: [
+    {
+      id: 1,
+      buttonTitle: 'gaff',
+      explanation: 'a less formal way of saying house or home',
+      example: "Let's go back to my gaff for a few cans",
+    },
+    {
+      id: 2,
+      buttonTitle: 'spuds',
+      explanation: 'Another term for potatoes',
+      example: "I'd love a few spuds for dinner today",
     },
   ],
 })
 
 export const mutations = {
+MAKEGREETINGS(state){
+  state.category = 'greetings'
+},
+MAKESWEARS(state){
+  state.category = 'swears'
+},
+MAKEMISC(state){
+  state.category = 'misc'
+},
   ADDTOCART(state, item) {
     state.cartItems = [item, ...state.cartItems]
   },
