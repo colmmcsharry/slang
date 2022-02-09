@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -28,12 +27,7 @@ export default {
   computed: {
     state() {
       return this.$store.state
-    },
-    lolfunction(){
-     return () => {
-     alert('lol')
-     }
-    },
+    }
   },
   methods: {
     makeGreetings() {

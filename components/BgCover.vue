@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style scoped>
-.cover {
+/* .cover {
   width:100vw;
   height:100vh;
   z-index:-2;
@@ -28,6 +28,14 @@ export default {
   top:0px;
   left:0px;
   
+} */
+
+.cover {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:red;
+  z-index: -2;
 }
 
 </style>

@@ -1,16 +1,21 @@
 <template lang="pug">
   .container
     CaptionedContent
-        template(slot="content")
-          img(src='https://i.imgur.com/EJOjIMC.jpeg')
-        template(slot="caption")
-          p hellloooo
+        p(slot="caption") hellloooo this si a test
       
     CaptionedContent
         template(#content)
           p this is going in instead of image in this instance
         template(#caption)
-          p some other text  
+          p some other text
+        h4(slot="heading")  new headfing 
+    CaptionedContent     
+      p(slot="caption") iyhiuhi
+
+    slot(name="bottomslot")
+    CaptionedContent(slot="bottomslot")  
+
+        
 
          
 

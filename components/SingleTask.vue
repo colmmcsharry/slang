@@ -1,11 +1,9 @@
-<template>
-  <div :class="`task ${task.done ? 'is-complete' : ''}`">
-    <div class="content">{{ task.content }}</div>
-    <div class="buttons">
-      <button @click="toggleDone">{{ task.done ? 'Undo' : 'Done' }}</button>
-      <button class="delete" @click="removeTask">Delete</button>
-    </div>
-  </div>
+<template lang="pug">
+  div(:class="`task ${task.done ? 'is-complete' : ''}`")
+    .content {{ task.content }}
+    .buttons
+      button(@click='toggleDone') {{ task.done ? &apos;Undo&apos; : &apos;Done&apos; }}
+      button.delete(@click='removeTask') Delete
 </template>
 
 <script>

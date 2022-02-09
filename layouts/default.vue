@@ -1,8 +1,13 @@
 <template>
   <div>
     <MyNavbar />
-    <BgCover />
       <Nuxt />
     <TheFooter />
   </div>
 </template>
+
+<style>
+body {
+  background-color:#303030;
+}
+</style>
