@@ -1,12 +1,16 @@
 <template lang="pug">
 .navbar
-  ul
+  ul.onLarge
     NuxtLink.logo(to='/')   My Logo
     .navlinks
       li(v-for="i in pages") 
         NuxtLink(:to="i" ) {{i}}
 
-
+  b-dropdown#dropdown-1.m-md-2.hamburger(text='Menu')
+      b-dropdown-item(to="/about") about
+      b-dropdown-item(to="/slang") slang
+      b-dropdown-item(to="/task-board") task-board
+      b-dropdown-item(to="/testPage") testPage
 
 
 
@@ -32,6 +36,14 @@ export default {
 </script>
 
 <style scoped>
+.hamburger {
+  margin:0;
+  padding:0;
+  top:10px;
+  position:absolute;
+  right:10px;
+}
+
 .navbar {
   display: flex;
   border-bottom: 1px solid gray;
@@ -43,7 +55,8 @@ export default {
   flex-direction: row;
 }
 
-ul {
+
+ul.onLarge {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -70,13 +83,20 @@ ul {
 li {
   margin: 0px 10px;
   color: rgb(243, 243, 243);
-  font-size:18px;
+  font-size:14px;
   font-weight:bold;
 }
 
 a {
   text-decoration: none;
    color:white;
+}
+
+@media screen and (max-width:1200px) {
+  .navlinks {display:none;}
+}
+@media screen and (min-width:1200px) {
+  .hamburger {display:none;}
 }
 
 </style>

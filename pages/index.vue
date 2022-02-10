@@ -23,8 +23,13 @@ body {
   color: white;
   background-color:green
 }
-.container {
+
+@media screen and (min-width:1200px) {
+  .container {
   max-width: 1100px;
+  }
+}
+.container {
   margin: auto;
   padding: 0 2rem;
   color: white;

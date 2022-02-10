@@ -45,9 +45,13 @@ export default {
 
 <style>
 .container {
-  width: 800px;
   border: 2px solid lightgray;
   color: white;
+   max-width: 800px
+}
+
+div {
+   text-align:center;
 }
 
 .mydropdown {

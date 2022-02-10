@@ -5,7 +5,7 @@
       ul.categoryList
         li.quoteDiv(v-for='quote in quotes' :key='quote.id')   
           button.quoteButton(@click.prevent="playSound(quote.audioPath)") {{ quote.buttonTitle }}
-          p {{ quote.explanation }}  
+          p.explanation {{ quote.explanation }}  
           p.example {{ quote.example }}
 
 </template>
@@ -54,7 +54,7 @@ export default {
 
 <style >
 .container {
-  width: 800px;
+  max-width: 800px;
   display:flex;
   align-items:center;
   flex-direction:column;
@@ -81,6 +81,9 @@ li.quoteDiv {
   font-style: italic;
 }
 
+.example, .explanation {
+  text-align:left;
+}
 
 .quoteButton {
   padding: 5px 10px;
