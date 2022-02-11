@@ -46,7 +46,7 @@ export default {
 <style>
 .container {
   border: 2px solid lightgray;
-  color: white;
+  color: #59BEC4;
    max-width: 800px
 }
 
@@ -60,11 +60,16 @@ div {
   padding:2rem;
 }
 
-#dropdown-1{
-    font-size:40px !important;
+.btn dropdown-toggle btn-secondary {
+  background-color: green;
+}
+
+#dropdown-1 > button{
+    background-color: #fbddf3;
+    color:#59BEC4
 }
 
 p {
-  color: white;
+  color: #59BEC4;
 }
 </style>

@@ -9,8 +9,8 @@ Footer
 <style scoped>
 
 .myfooter {
-    border:1px solid black;
-    background-color:rgb(48, 48, 48);
+ background-color: #ccc2ad;
+  color: #59BEC4;
     color:white;
     position:fixed;
     bottom:0px;

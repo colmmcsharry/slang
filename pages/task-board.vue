@@ -40,9 +40,9 @@ export default {
 
 <style scoped>
 h1 {
-  color: white;
+  color: #59BEC4
 }
 p {
-  color: white;
+  color:#59BEC4;
 }
 </style>

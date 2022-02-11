@@ -90,6 +90,8 @@ li.quoteDiv {
   border-radius: 10px;
   margin-bottom:15px 0px;
   font-weight:bold;
+  color:#59BEC4;
+  border:1px solid #59BEC4;
 }
 
 

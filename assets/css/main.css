@@ -40,7 +40,7 @@ main .create-new input {
 	outline: none;
 	border-bottom: 1px solid #FFF;
 	background-color: transparent;
-	color: #FFF;
+	color: #59BEC4;
 	font-size: 1.5rem;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
@@ -59,7 +59,7 @@ main .create-new button {
 	background-color: rgb(47, 214, 111);
 	text-transform: uppercase;
 	font-weight: bold;
-	color: #000;
+	color: #59BEC4;
 	font-size: 1.5rem;
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
@@ -94,7 +94,7 @@ main .tasks .task button {
 	background-color: rgb(47, 214, 111);
 	text-transform: uppercase;
 	font-weight: bold;
-	color: #000;
+	color: #59BEC4;
 	font-size: 0.875rem;
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
@@ -104,7 +104,7 @@ main .tasks .task button {
 
 main .tasks .task button.delete {
 	background-color: crimson;
-	color: #EEE;
+	color: #59BEC4
 }
 
 .tasks .task.is-complete {

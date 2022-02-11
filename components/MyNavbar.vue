@@ -49,8 +49,8 @@ export default {
   border-bottom: 1px solid gray;
   align-items: flex-end;
   justify-content: flex-end;
-  background-color: rgb(48, 48, 48);
-  color: lightblue;
+  background-color: #FEF3DC;
+  color: #59BEC4;
   font-family: Cursive;
   flex-direction: row;
 }
@@ -64,12 +64,12 @@ ul.onLarge {
   width:100%;
   margin-bottom: 10px;
   margin-right: 10px;
-  color:white;
+  color:#59BEC4;
 }
 
 .logo {
-  color: lightblue;
-  border: 1px solid lightgray;
+  color: #59BEC4;
+  border: 1px solid #59BEC4;
   border-radius: 50%;
   padding: 10px;
 }
@@ -82,14 +82,14 @@ ul.onLarge {
 
 li {
   margin: 0px 10px;
-  color: rgb(243, 243, 243);
+  color: #59BEC4;
   font-size:14px;
   font-weight:bold;
 }
 
 a {
   text-decoration: none;
-   color:white;
+   color:#59BEC4;
 }
 
 @media screen and (max-width:1200px) {
