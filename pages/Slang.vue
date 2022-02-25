@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       myvariable: 'random text',
-      showSwears: false,    }
+  }
   },
 
   computed: {

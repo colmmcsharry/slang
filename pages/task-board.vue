@@ -14,9 +14,11 @@
 
     .tasks
       SingleTask(
-        v-for="(task, i) in $store.state.tasks"
-        :key="i"
+        v-for="(task, index) in $store.state.tasks"
+        :key="index"
         :task="task")
+          p {{index}}
+          
     
 </template>
 
@@ -45,4 +47,5 @@ h1 {
 p {
   color:#59BEC4;
 }
+
 </style>

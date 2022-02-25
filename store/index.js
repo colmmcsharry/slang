@@ -10,7 +10,7 @@ export const state = () => ({
       explanation: "This is how we ask each other how we're doing",
       example: "Oh hello David, what's the craic?",
       audioPath: require('@/assets/whatsTheCraic.m4a').default,
-      isPlaying: true
+      isPlaying: false
     },
     {
       id: 2,
@@ -62,6 +62,7 @@ export const state = () => ({
 export const mutations = {
 MAKEGREETINGS(state){
   state.category = 'greetings'
+  state.greetingQuotes.isPlaying = true
 },
 MAKESWEARS(state){
   state.category = 'swears'
@@ -76,7 +77,7 @@ MAKEMISC(state){
     state.cartItems.splice(state.cartItems.indexOf(item), 1)
   },
 
-  // not working todolist starts
+  // todolist starts
   ADD_TASK(state, task) {
     state.tasks = [{ content: task, done: false }, ...state.tasks]
   },
@@ -90,7 +91,10 @@ MAKEMISC(state){
   INCREMENT(state) {
     state.counter++
   },
-  ISPLAYING(state, quote){
-    state.quote.isPlaying = true
+  // SHOWSPEAKER(state, quote){
+  //   quote.isPlaying = true
+  // }
+  TOGGLERED(state, chosenquote){
+    chosenquote.red = !chosenquote.red
   }
 }

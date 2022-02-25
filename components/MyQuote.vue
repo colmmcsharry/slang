@@ -3,11 +3,10 @@
       h2.categoryHeading {{ category }}
           
       ul.categoryList
-        li.quoteDiv(v-for='quote in quotes' :key='quote.id')   
-          button.quoteButton.button(@click.prevent="playSound(quote.audioPath);makeVisible") {{ quote.buttonTitle }}
-          img.loudspeaker(v-show="quote.isPlaying" src="../assets/soundIcon.png" height="35px" width="35px")
-          p.explanation {{ quote.explanation }}  
-          p.example {{ quote.example }}
+        TestComponent(v-for='quote in quotes' 
+                      :key='quote.id'
+                      :quote='quote')   
+       
 
 </template>
 
@@ -18,9 +17,9 @@ export default {
 
   data() {
     return {
+      playingSound: false
      }
-      },
-
+  },
   computed: {
     state() {
        return this.$store.state
@@ -44,14 +43,13 @@ export default {
     playSound (sound) {
       if(sound) {
         const audio = new Audio(sound);
-        console.log('lol');
+        console.log(this.playingSound);
         audio.play();
+        this.playingSound = true;
+        console.log("audio length is", audio.duration);
+        console.log(this.playingSound);
       }
     },
-    isPlaying(){
-       this.$store.commit('ISPLAYING')
-    }
-  
   }
 }
 </script>
