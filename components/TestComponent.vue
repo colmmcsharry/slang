@@ -33,8 +33,14 @@ export default {
           this.playingSound = false;
         }, 1900);
 
-    }
+    },
   }
   
 }
 </script>
+
+<style>
+.quoteDiv {
+  /* background-color:red; */
+}
+</style>

@@ -39,18 +39,18 @@ export default {
       }
     },
   },
-  methods: {
-    playSound (sound) {
-      if(sound) {
-        const audio = new Audio(sound);
-        console.log(this.playingSound);
-        audio.play();
-        this.playingSound = true;
-        console.log("audio length is", audio.duration);
-        console.log(this.playingSound);
-      }
-    },
-  }
+  // methods: {
+  //   playSound (sound) {
+  //     if(sound) {
+  //       const audio = new Audio(sound);
+  //       console.log(this.playingSound);
+  //       audio.play();
+  //       this.playingSound = true;
+  //       console.log("audio length is", audio.duration);
+  //       console.log(this.playingSound);
+  //     }
+  //   },
+  // }
 }
 </script>
 
