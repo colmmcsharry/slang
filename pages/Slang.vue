@@ -1,10 +1,13 @@
 <template lang="pug">
   div.redb
     .flags
-      img.flag(src="https://www.irelandandbeyond.com/wp-content/uploads/2021/02/flag-ireland-1024x683.jpg.webp") 
-      img.flag(src="https://cdn.britannica.com/44/344-004-494CC2E8/Flag-England.jpg") 
-      img.flag(src="http://4.bp.blogspot.com/-SUet8L5kd2g/UE1aWzCVf3I/AAAAAAAAANc/DpmZINoJ0JU/s1600/Australia_flag.jpg") 
-    b-dropdown#dropdown-1.m-md-2.mydropdown(text='Irish Phrases')
+      img.flag(src="https://www.irelandandbeyond.com/wp-content/uploads/2021/02/flag-ireland-1024x683.jpg.webp"
+              @click="makeIreland") 
+      img.flag(src="https://cdn.britannica.com/44/344-004-494CC2E8/Flag-England.jpg"
+              @click="makeEngland") 
+      img.flag(src="http://4.bp.blogspot.com/-SUet8L5kd2g/UE1aWzCVf3I/AAAAAAAAANc/DpmZINoJ0JU/s1600/Australia_flag.jpg"
+                @click="makeAussie") 
+    b-dropdown#dropdown-1.m-md-2.mydropdown(:text=" state.country + ' phrases' " )
       b-dropdown-item(@click="makeGreetings") Greetings
       b-dropdown-item(@click="makeSwears") Swears
       b-dropdown-item(@click="makeMisc")  Miscelleanous
@@ -34,6 +37,15 @@ export default {
     }
   },
   methods: {
+    makeEngland() {
+        this.$store.commit('MAKEENGLAND')
+    },
+     makeIreland() {
+        this.$store.commit('MAKEIRELAND')
+    },
+     makeAussie() {
+        this.$store.commit('MAKEAUSSIE')
+    },
     makeGreetings() {
         this.$store.commit('MAKEGREETINGS')
     },
@@ -51,16 +63,14 @@ export default {
 .container {
   border: 2px solid lightgray;
   color: #59BEC4;
-   max-width: 800px
+   max-width: 800px;
+   border-radius:6px;
 }
 
 div {
    text-align:center;
 }
 
-.redb {
-  border:2px solid red;
-}
 
 .flags {
   display: flex;
@@ -70,7 +80,6 @@ div {
   width:250px;
   height:90px;
   margin:0 auto;
-  border:1px solid blue;
   gap:10px;
   place-items:center;
 }
@@ -78,6 +87,7 @@ div {
 .flag {
   max-width:80px;
   max-height:70px;
+  cursor:pointer;
 }
 
 

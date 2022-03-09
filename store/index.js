@@ -3,6 +3,7 @@ export const state = () => ({
   counter: 0,
   cartItems: [],
   category: '',
+  country: 'Irish',
   greetingQuotes: [
     {
       id: 1,
@@ -60,9 +61,20 @@ export const state = () => ({
 })
 
 export const mutations = {
+  MAKEENGLAND(state){
+    state.country = 'English';
+    console.log('this is england }')
+  },
+  MAKEIRELAND(state){
+    state.country = 'Irish';
+    console.log('this is Ireland }')
+  },
+  MAKEAUSSIE(state){
+    state.country = 'Aussie';
+    console.log('this is Oz }')
+  },
 MAKEGREETINGS(state){
   state.category = 'greetings'
-  state.greetingQuotes.isPlaying = true
 },
 MAKESWEARS(state){
   state.category = 'swears'
@@ -90,11 +102,5 @@ MAKEMISC(state){
   // todo list ends
   INCREMENT(state) {
     state.counter++
-  },
-  // SHOWSPEAKER(state, quote){
-  //   quote.isPlaying = true
-  // }
-  TOGGLERED(state, chosenquote){
-    chosenquote.red = !chosenquote.red
   }
 }

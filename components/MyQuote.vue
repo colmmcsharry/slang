@@ -39,18 +39,6 @@ export default {
       }
     },
   },
-  // methods: {
-  //   playSound (sound) {
-  //     if(sound) {
-  //       const audio = new Audio(sound);
-  //       console.log(this.playingSound);
-  //       audio.play();
-  //       this.playingSound = true;
-  //       console.log("audio length is", audio.duration);
-  //       console.log(this.playingSound);
-  //     }
-  //   },
-  // }
 }
 </script>
 
@@ -72,7 +60,8 @@ export default {
 }
 
 li.quoteDiv {
-    border:1px solid gray;
+    border:1px solid rgb(211, 211, 211);
+    border-radius:5px;
   margin: 10px 0px;
   padding: 15px 6px;
   text-align:center;
