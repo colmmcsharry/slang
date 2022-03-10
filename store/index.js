@@ -63,15 +63,66 @@ export const state = () => ({
 export const mutations = {
   MAKEENGLAND(state){
     state.country = 'English';
-    console.log('this is england }')
+    state.greetingQuotes = [
+      {
+         id: 1,
+         buttonTitle: "What's up, mate?",
+         explanation: "This is how we ask each other how we're doing",
+         example: "Oh hello David, what's up mate?",
+         audioPath: require('@/assets/whatsTheCraic.m4a').default,
+         isPlaying: false
+       },
+       {
+         id: 2,
+         buttonTitle: 'Story horse',
+         explanation: 'This is how we ask each other what is up',
+         example: "Ah Frank! What's the story horse?",
+         audioPath: require('@/assets/storyHorse.m4a').default,
+         isPlaying: false
+       }
+      ]
   },
   MAKEIRELAND(state){
     state.country = 'Irish';
-    console.log('this is Ireland }')
+    state.greetingQuotes = [
+      {
+         id: 1,
+         buttonTitle: "What's the craic",
+         explanation: "This is how we ask each other how we're doing",
+         example: "Oh hello David, what's the craic?",
+         audioPath: require('@/assets/whatsTheCraic.m4a').default,
+         isPlaying: false
+       },
+       {
+         id: 2,
+         buttonTitle: 'Story horse',
+         explanation: 'This is how we ask each other what is up',
+         example: "Ah Frank! What's the story horse?",
+         audioPath: require('@/assets/storyHorse.m4a').default,
+         isPlaying: false
+       }
+      ]
   },
   MAKEAUSSIE(state){
     state.country = 'Aussie';
-    console.log('this is Oz }')
+    state.greetingQuotes = [
+      {
+         id: 1,
+         buttonTitle: "G'Day Mate!",
+         explanation: "This is how we ask each other how we're doing",
+         example: "Oh hey David, G'Day mate!",
+         audioPath: require('@/assets/whatsTheCraic.m4a').default,
+         isPlaying: false
+       },
+       {
+         id: 2,
+         buttonTitle: 'Story horse',
+         explanation: 'This is how we ask each other what is up',
+         example: "Ah Frank! What's the story horse?",
+         audioPath: require('@/assets/storyHorse.m4a').default,
+         isPlaying: false
+       }
+      ]
   },
 MAKEGREETINGS(state){
   state.category = 'greetings'
@@ -102,5 +153,5 @@ MAKEMISC(state){
   // todo list ends
   INCREMENT(state) {
     state.counter++
-  }
+  },
 }
