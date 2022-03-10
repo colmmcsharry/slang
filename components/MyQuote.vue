@@ -75,8 +75,8 @@ li.quoteDiv {
 
 .loudspeaker {
   position:absolute;
-  top:45%;
-  left:48%
+  top:120px;
+  left:48%;
 }
 
 .example, .explanation {

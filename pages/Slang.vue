@@ -2,11 +2,14 @@
   div.redb
     .flags
       img.flag(src="https://www.irelandandbeyond.com/wp-content/uploads/2021/02/flag-ireland-1024x683.jpg.webp"
-              @click="makeIreland") 
-      img.flag(src="https://cdn.britannica.com/44/344-004-494CC2E8/Flag-England.jpg"
-              @click="makeEngland") 
+              @click="makeIreland"
+              :class="state.country === 'Irish' ? 'highlight' : '' ")
+      img#engflag.flag(src="https://cdn.britannica.com/44/344-004-494CC2E8/Flag-England.jpg"
+              @click="makeEngland"
+              :class="state.country === 'English' ? 'highlight' : '' ")
       img.flag(src="http://4.bp.blogspot.com/-SUet8L5kd2g/UE1aWzCVf3I/AAAAAAAAANc/DpmZINoJ0JU/s1600/Australia_flag.jpg"
-                @click="makeAussie") 
+                @click="makeAussie"
+                :class="state.country === 'Aussie' ? 'highlight' : '' ")
     b-dropdown#dropdown-1.m-md-2.mydropdown(:text=" state.country + ' phrases' " )
       b-dropdown-item(@click="makeGreetings") Greetings
       b-dropdown-item(@click="makeSwears") Swears
@@ -71,6 +74,9 @@ div {
    text-align:center;
 }
 
+.highlight {
+  filter: brightness(120%) !important;
+}
 
 .flags {
   display: flex;
@@ -80,6 +86,7 @@ div {
   width:250px;
   height:90px;
   margin:0 auto;
+ 
   gap:10px;
   place-items:center;
 }
@@ -88,6 +95,7 @@ div {
   max-width:80px;
   max-height:70px;
   cursor:pointer;
+   filter: brightness(50%);
 }
 
 

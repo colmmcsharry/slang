@@ -74,9 +74,9 @@ export const mutations = {
        },
        {
          id: 2,
-         buttonTitle: 'Story horse',
+         buttonTitle: "How's it goin?",
          explanation: 'This is how we ask each other what is up',
-         example: "Ah Frank! What's the story horse?",
+         example: "Ah Frank! How's it goin?",
          audioPath: require('@/assets/storyHorse.m4a').default,
          isPlaying: false
        }
@@ -108,7 +108,7 @@ export const mutations = {
     state.greetingQuotes = [
       {
          id: 1,
-         buttonTitle: "G'Day Mate!",
+         buttonTitle: "G'Day mate!",
          explanation: "This is how we ask each other how we're doing",
          example: "Oh hey David, G'Day mate!",
          audioPath: require('@/assets/whatsTheCraic.m4a').default,
@@ -116,9 +116,9 @@ export const mutations = {
        },
        {
          id: 2,
-         buttonTitle: 'Story horse',
+         buttonTitle: 'How ya goin?',
          explanation: 'This is how we ask each other what is up',
-         example: "Ah Frank! What's the story horse?",
+         example: "Ah Frank! How ya goin mate?",
          audioPath: require('@/assets/storyHorse.m4a').default,
          isPlaying: false
        }
