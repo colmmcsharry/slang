@@ -46,10 +46,9 @@ export default {
 
 .navbar {
   display: flex;
-  border-bottom: 1px solid gray;
   align-items: flex-end;
   justify-content: flex-end;
-  background-color: #FEF3DC;
+  background-color: #c7beab41;
   color: #59BEC4;
   font-family: Cursive;
   flex-direction: row;
@@ -68,8 +67,8 @@ ul.onLarge {
 }
 
 .logo {
-  color: #59BEC4;
-  border: 1px solid #59BEC4;
+  color: #04AA6D;
+  border: 1px solid #04AA6D;
   border-radius: 50%;
   padding: 10px;
 }
@@ -82,14 +81,15 @@ ul.onLarge {
 
 li {
   margin: 0px 10px;
-  color: #59BEC4;
+  color: #04AA6D;
   font-size:14px;
   font-weight:bold;
+  text-transform: capitalize
 }
 
 a {
   text-decoration: none;
-   color:#59BEC4;
+   color:#04AA6D;
 }
 
 @media screen and (max-width:1200px) {

@@ -64,10 +64,8 @@ export default {
 
 <style>
 .container {
-  border: 2px solid lightgray;
-  color: #59BEC4;
+  color: #04AA6D;
    max-width: 800px;
-   border-radius:6px;
 }
 
 div {
@@ -76,6 +74,9 @@ div {
 
 .highlight {
   filter: brightness(120%) !important;
+  transform:scale(115%);
+  transition:all .2s ease;
+  z-index:2;
 }
 
 .flags {
@@ -85,8 +86,7 @@ div {
   align-items: space-evenly;
   width:250px;
   height:90px;
-  margin:0 auto;
- 
+  margin:10px auto 0;
   gap:10px;
   place-items:center;
 }
@@ -102,8 +102,7 @@ div {
 
 .mydropdown {
   position:relative;
-  padding:4rem;
-  top:30px;
+  padding:.4rem 0 3rem;
 }
 
 .btn dropdown-toggle btn-secondary {
@@ -112,10 +111,11 @@ div {
 
 #dropdown-1 > button{
     background-color: #fbddf3;
-    color:#59BEC4
+    color:#333333;
+    font-weight:bold;
 }
 
 p {
-  color: #59BEC4;
+  color: #04AA6D
 }
 </style>

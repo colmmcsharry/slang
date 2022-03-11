@@ -48,11 +48,14 @@ export default {
   display:flex;
   align-items:center;
   flex-direction:column;
+  text-transform: capitalize;
 }
 
 .categoryHeading {
   margin:2rem 0 4rem;
   font-weight:bold;
+  color:#333333;
+  text-decoration:underline
 }
 
 .categoryList {
@@ -60,8 +63,8 @@ export default {
 }
 
 li.quoteDiv {
-    border:1px solid rgb(211, 211, 211);
-    border-radius:5px;
+    border-bottom:1px solid rgb(211, 211, 211);
+    border-radius:6px;
   margin: 10px 0px;
   padding: 15px 6px;
   text-align:center;
@@ -76,21 +79,24 @@ li.quoteDiv {
 .loudspeaker {
   position:absolute;
   top:120px;
-  left:48%;
+  left:46%;
 }
 
 .example, .explanation {
   text-align:left;
+  color: #333333;
 }
 
-/* .quoteButton {
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin-bottom:15px 0px;
-  font-weight:bold;
-  color:#59BEC4;
-  border:1px solid #59BEC4;
+/* .explanation::before {
+  content: "- "
 } */
+.example::before {
+  content: "eg. "
+}
+
+.example {
+  font-weight:400;
+}
 
 .button {
   padding: 15px 25px;
