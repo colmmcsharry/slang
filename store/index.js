@@ -81,7 +81,43 @@ export const mutations = {
          audioPath: require('@/assets/storyHorse.m4a').default,
          isPlaying: false
        }
-      ]
+      ];
+      state.swearQuotes =  [
+        {
+          id: 1,
+          buttonTitle: 'Poxy',
+          explanation: 'An adjective, used to describe something terrible',
+          example: 'Ah that new Star Wars movie is poxy',
+          audioPath: require('@/assets/feck.m4a').default,
+          isPlaying: false
+        },
+        {
+          id: 2,
+          buttonTitle: 'Dickhead',
+          explanation: 'A negative term for a man',
+          example: 'That guy Joh is a complete dickhead',
+          audioPath: require('@/assets/bollox.m4a').default,
+          isPlaying: false
+        },
+      ];
+      state.miscQuotes = [
+        {
+          id: 1,
+          buttonTitle: 'Bloke',
+          explanation: 'An informal way of referring to a man',
+          example: "I like John, he's a nice bloke",
+          audioPath: require('@/assets/gaff.m4a').default,
+          isPlaying: false
+        },
+        {
+          id: 2,
+          buttonTitle: 'Dodgy',
+          explanation: "An adjective to describe someone or something that's weird or unreliable",
+          example: "My stomach feels terrible, that chicken I ate smelled a bit dodgy",
+          audioPath: require('@/assets/spuds.m4a').default,
+          isPlaying: false
+        },
+      ];
   },
   MAKEIRELAND(state){
     state.country = 'Irish';
@@ -103,7 +139,7 @@ export const mutations = {
          isPlaying: false
        }
       ];
-      state.greetingQuotes =  [
+      state.swearQuotes =  [
         {
           id: 1,
           buttonTitle: 'Feck',
@@ -181,7 +217,7 @@ export const mutations = {
         state.miscQuotes = [
           {
              id: 1,
-             buttonTitle: "cunt",
+             buttonTitle: "Cunt",
              explanation: "A bad word in other countries, in Australia this is a term of affection",
              example: "G'Day cunts, I was just over at Clint's house havin beers, he's a good cunt.",
              audioPath: require('@/assets/whatsTheCraic.m4a').default,
@@ -189,9 +225,9 @@ export const mutations = {
            },
            {
              id: 2,
-             buttonTitle: 'Bugger',
-             explanation: 'Refers to somebody annoying',
-             example: "That Barry guy is a right bugger",
+             buttonTitle: 'Bogan',
+             explanation: 'Refers to somebody who is working-class and exhibits anti-social behavior. Similar to chav or knacker.',
+             example: "I didn't enjoy that nightclub, it was full of bogans",
              audioPath: require('@/assets/storyHorse.m4a').default,
              isPlaying: false
            }
