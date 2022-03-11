@@ -28,11 +28,11 @@ export default {
       return this.$store.state.category
     },
     quotes() {
-      if (this.category === 'swears') {
+      if (this.category === 'Swears') {
         return this.state.swearQuotes; 
-      } else if (this.category === 'greetings') {
+      } else if (this.category === 'Greetings') {
         return this.state.greetingQuotes; 
-      } else if(this.category === 'misc') {
+      } else if(this.category === 'Misc') {
         return this.state.miscQuotes; 
       }else {
         return [];
@@ -48,7 +48,6 @@ export default {
   display:flex;
   align-items:center;
   flex-direction:column;
-  text-transform: capitalize;
 }
 
 .categoryHeading {

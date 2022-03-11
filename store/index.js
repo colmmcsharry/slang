@@ -40,7 +40,7 @@ export const state = () => ({
       isPlaying: false
     },
   ],
-  miscQuotes: [
+  miscQuotes:[
     {
       id: 1,
       buttonTitle: 'Gaff',
@@ -57,7 +57,8 @@ export const state = () => ({
       audioPath: require('@/assets/spuds.m4a').default,
       isPlaying: false
     },
-  ],
+  ]
+  
 })
 
 export const mutations = {
@@ -101,6 +102,42 @@ export const mutations = {
          audioPath: require('@/assets/storyHorse.m4a').default,
          isPlaying: false
        }
+      ];
+      state.greetingQuotes =  [
+        {
+          id: 1,
+          buttonTitle: 'Feck',
+          explanation: 'A less harsh version of the F word',
+          example: 'Ah feck, I forgot the football was on tonight',
+          audioPath: require('@/assets/feck.m4a').default,
+          isPlaying: false
+        },
+        {
+          id: 2,
+          buttonTitle: 'Bollocks',
+          explanation: 'Usually uttered when something bad happens',
+          example: 'Ah bollocks, I dropped my phone into the bath',
+          audioPath: require('@/assets/bollox.m4a').default,
+          isPlaying: false
+        },
+      ];
+      state.miscQuotes = [
+        {
+          id: 1,
+          buttonTitle: 'Gaff',
+          explanation: 'A less formal way of saying house or home',
+          example: "Let's go back to my gaff for a few cans",
+          audioPath: require('@/assets/gaff.m4a').default,
+          isPlaying: false
+        },
+        {
+          id: 2,
+          buttonTitle: 'Spuds',
+          explanation: 'Another term for potatoes',
+          example: "I'd love a few spuds for dinner today",
+          audioPath: require('@/assets/spuds.m4a').default,
+          isPlaying: false
+        },
       ]
   },
   MAKEAUSSIE(state){
@@ -122,16 +159,52 @@ export const mutations = {
          audioPath: require('@/assets/storyHorse.m4a').default,
          isPlaying: false
        }
-      ]
+      ];
+      state.swearQuotes = [
+        {
+           id: 1,
+           buttonTitle: "Crikey!",
+           explanation: "This is when we're shocked about something",
+           example: "Crikey! I've left the grill on! ",
+           audioPath: require('@/assets/whatsTheCraic.m4a').default,
+           isPlaying: false
+         },
+         {
+           id: 2,
+           buttonTitle: 'Bugger',
+           explanation: 'Refers to somebody annoying',
+           example: "That Barry guy is a right bugger",
+           audioPath: require('@/assets/storyHorse.m4a').default,
+           isPlaying: false
+         }
+        ];
+        state.miscQuotes = [
+          {
+             id: 1,
+             buttonTitle: "cunt",
+             explanation: "A bad word in other countries, in Australia this is a term of affection",
+             example: "G'Day cunts, I was just over at Clint's house havin beers, he's a good cunt.",
+             audioPath: require('@/assets/whatsTheCraic.m4a').default,
+             isPlaying: false
+           },
+           {
+             id: 2,
+             buttonTitle: 'Bugger',
+             explanation: 'Refers to somebody annoying',
+             example: "That Barry guy is a right bugger",
+             audioPath: require('@/assets/storyHorse.m4a').default,
+             isPlaying: false
+           }
+          ]
   },
 MAKEGREETINGS(state){
-  state.category = 'greetings'
+  state.category = 'Greetings'
 },
 MAKESWEARS(state){
-  state.category = 'swears'
+  state.category = 'Swears'
 },
 MAKEMISC(state){
-  state.category = 'misc'
+  state.category = 'Misc'
 },
   ADDTOCART(state, item) {
     state.cartItems = [item, ...state.cartItems]
