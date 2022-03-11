@@ -2,7 +2,7 @@ export const state = () => ({
   tasks: [],
   counter: 0,
   cartItems: [],
-  category: '',
+  category: 'Greetings',
   country: 'Irish',
   greetingQuotes: [
     {

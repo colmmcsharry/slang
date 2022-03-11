@@ -86,9 +86,6 @@ li.quoteDiv {
   color: #333333;
 }
 
-/* .explanation::before {
-  content: "- "
-} */
 .example::before {
   content: "eg. "
 }
@@ -120,14 +117,6 @@ li.quoteDiv {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-/* .button:active::after {
-  content: "lool";
-  position:absolute;
-  bottom: -20px;
-  color:black;
-  left:40%;
-} */
 
 </style>
 
