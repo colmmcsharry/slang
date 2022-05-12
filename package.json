@@ -33,8 +33,16 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
+    "lint-staged": "^12.4.0",
+    "mocha": "^9.2.2",
     "prettier": "^2.5.1",
     "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0"
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.50.1",
+    "sass-migrator": "^1.5.4",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.2.0"
   }
 }

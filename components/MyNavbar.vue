@@ -1,7 +1,9 @@
 <template lang="pug">
 .navbar
   ul.onLarge
-    NuxtLink.logo(to='/')   My Logo
+    NuxtLink.logo(to='/')
+      img.logopic(src="../assets/bonkers-logo.svg")
+    li.nav-item
     .navlinks
       li(v-for="i in pages") 
         NuxtLink(:to="i" ) {{i}}
@@ -12,16 +14,6 @@
       b-dropdown-item(to="/task-board") task-board
       b-dropdown-item(to="/testPage") testPage
 
-
-
-  //-
-  //- ul
-  //-   NuxtLink(to='about')
-  //-     li About
-  //-   NuxtLink(to='slang')
-  //-     li Slang
-  //-   NuxtLink(to='task-board')
-  //-     li Taskboard
 </template>
 
 <script>
@@ -44,11 +36,18 @@ export default {
   right:10px;
 }
 
+.logopic {
+  width: 150px;
+  height: 70px;
+
+}
+
 .navbar {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  background-color: #c7beab41;
+  /* background-color: $bonkers-color; */
+  background-color: lightgreen;
   color: #59BEC4;
   font-family: Cursive;
   flex-direction: row;
@@ -66,12 +65,6 @@ ul.onLarge {
   color:#59BEC4;
 }
 
-.logo {
-  color: #04AA6D;
-  border: 1px solid #04AA6D;
-  border-radius: 50%;
-  padding: 10px;
-}
 
 .navlinks {
   display:flex;
