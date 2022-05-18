@@ -14,6 +14,7 @@
       b-dropdown-item(@click="makeGreetings") Greetings
       b-dropdown-item(@click="makeSwears") Swears
       b-dropdown-item(@click="makeMisc")  Miscelleanous
+      b-dropdown-item(@click="makeFaves")  Favourites
 
     MyQuote
 
@@ -57,12 +58,15 @@ export default {
     },
     makeMisc() {
         this.$store.commit('MAKEMISC')
+    },
+    makeFaves() {
+        this.$store.commit('MAKEFAVES')
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   color: #04AA6D;
    max-width: 800px;
@@ -110,7 +114,7 @@ div {
 }
 
 #dropdown-1 > button{
-    background-color: #fbddf3;
+    background-color: $bonkers-color;
     color:#333333;
     font-weight:bold;
 }

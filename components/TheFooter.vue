@@ -6,14 +6,15 @@ Footer
     </div>   
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .myfooter {
- background-color: #ccc2ad;
-  color: #59BEC4;
+ background-color: $bonkers-footer;
     color:white;
-    position:fixed;
+    position:relative;
     bottom:0px;
     width:100%;
+    margin:0;
+    padding:0;
 }
 </style>

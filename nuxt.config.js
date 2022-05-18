@@ -17,7 +17,7 @@ export default {
   target: 'static',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/constants.scss', '~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -26,7 +26,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['@nuxtjs/style-resources'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios', 'bootstrap-vue/nuxt'],
@@ -47,4 +47,10 @@ export default {
   server: {
     port: 5000, // default: localhost
   },
+
+
+  styleResources: {
+    hoistUseStatements: 'true',
+    scss: ['~assets/css/*.scss']
+  }
 }

@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .hamburger {
   margin:0;
   padding:0;
@@ -46,11 +46,10 @@ export default {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  /* background-color: $bonkers-color; */
-  background-color: lightgreen;
-  color: #59BEC4;
+   color: $white;
   font-family: Cursive;
   flex-direction: row;
+  background-color: $bonkers-color;
 }
 
 
@@ -62,7 +61,7 @@ ul.onLarge {
   width:100%;
   margin-bottom: 10px;
   margin-right: 10px;
-  color:#59BEC4;
+  color: $white;
 }
 
 
@@ -74,7 +73,7 @@ ul.onLarge {
 
 li {
   margin: 0px 10px;
-  color: #04AA6D;
+    color: $white;
   font-size:14px;
   font-weight:bold;
   text-transform: capitalize
@@ -82,7 +81,7 @@ li {
 
 a {
   text-decoration: none;
-   color:#04AA6D;
+     color: $white;
 }
 
 @media screen and (max-width:1200px) {

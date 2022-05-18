@@ -6,9 +6,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 body {
-  background-color: #FEF3DC;
+  background-color: $white;
   color: #333333
 }
 </style>

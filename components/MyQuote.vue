@@ -17,7 +17,6 @@ export default {
 
   data() {
     return {
-      playingSound: false
      }
   },
   computed: {
@@ -34,7 +33,10 @@ export default {
         return this.state.greetingQuotes; 
       } else if(this.category === 'Misc') {
         return this.state.miscQuotes; 
-      }else {
+      }  else if(this.category === 'Faves') {
+        return this.state.faveQuotes.filter(quote => quote.isFavourite === true); 
+      }
+      else {
         return [];
       }
     },
@@ -42,7 +44,7 @@ export default {
 }
 </script>
 
-<style >
+<style lang="scss" >
 .container {
   max-width: 800px;
   display:flex;
@@ -104,7 +106,7 @@ li.quoteDiv {
   position:relative;
   outline: none;
   color: #fff;
-  background-color: #04AA6D;
+  background-color: $bonkers-color;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
