@@ -1,16 +1,13 @@
 <template lang="pug">
    li.quoteDiv 
       button.quoteButton.button(@click.prevent="playSound(quote.audioPath)") {{ quote.buttonTitle }}
-      span
-        img.heart(@click="addFave" 
-                  :class="quote.isFavourite ? 'redcolor' : ''"
-                  src="../assets/empty-heart.png" )
+      img.heart(@click="addFave" 
+                :src="require(`@/assets/${heartURL}.png`)")
         //- img.heart(@click="addFave" v-else src="../assets/full-heart.png" height="35px" width="35px")
       img.loudspeaker(v-if="playingSound" src="../assets/soundIcon.png" height="35px" width="35px")
       p.explanation {{ quote.explanation }}  
       p.example {{ quote.example }}
 </template>
-
 
 <script>
 
@@ -21,12 +18,13 @@ export default {
     },
   data() {
     return {
-      playingSound: false,
-      isFave: false,
+      playingSound: false
      }
   },
   computed: {
-
+    heartURL () {
+      return this.quote.isFavourite ? 'full-heart' : 'empty-heart';
+    },
   },
   methods: {
     playSound(sound, quote){
@@ -47,7 +45,6 @@ export default {
       this.$store.commit('FAVE', this.quote)
   },
   removeFave(){
-    this.isFave = false;
     this.$store.commit('REMOVEFAVE', this.quote)
   },
   
@@ -61,13 +58,11 @@ export default {
 }
 
 .heart {
+  cursor: pointer;
   position:relative;
   left:1.1rem;
   height:35px;
-  width:35px
-}
-
-.redcolor {
-  background-color:red;
+  width:35px;
+  display:inline;
 }
 </style>
