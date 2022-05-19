@@ -3,7 +3,7 @@
       h2.categoryHeading {{ category }}
           
       ul.categoryList
-        TestComponent(v-for='quote in quotes' 
+        IndividualQuote(v-for='quote in quotes' 
                       :key='quote.id'
                       :quote='quote')   
        
@@ -61,16 +61,6 @@ export default {
 
 .categoryList {
   font-size:20px;
-}
-
-li.quoteDiv {
-    border-bottom:1px solid rgb(211, 211, 211);
-    border-radius:6px;
-  margin: 10px 0px;
-  padding: 15px 6px;
-  text-align:center;
-  list-style-type: none;
-  position:relative;
 }
 
 .example {

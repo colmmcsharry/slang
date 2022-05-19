@@ -5,13 +5,11 @@
 
 <script>
 import FoodMenu from '../components/FoodMenu.vue'
-import CaptionedContent from '../components/CaptionedContent.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     FoodMenu,
-    CaptionedContent,
   },
 }
 </script>

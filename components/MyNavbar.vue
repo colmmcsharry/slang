@@ -9,10 +9,9 @@
         NuxtLink(:to="i" ) {{i}}
 
   b-dropdown#dropdown-1.m-md-2.hamburger(text='Menu')
-      b-dropdown-item(to="/about") about
+      b-dropdown-item(to="/about") slots
       b-dropdown-item(to="/slang") slang
       b-dropdown-item(to="/task-board") task-board
-      b-dropdown-item(to="/testPage") testPage
 
 </template>
 
@@ -21,7 +20,7 @@ export default {
   name: 'FoodMenu',
   data() {
     return {
-      pages: ['about', 'slang', 'task-board', 'testPage']
+      pages: ['slots', 'slang', 'task-board']
   }
   }
 }

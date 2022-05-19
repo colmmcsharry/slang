@@ -53,8 +53,14 @@ export default {
 </script>
 
 <style>
-.quoteDiv {
-  /* background-color:red; */
+li.quoteDiv {
+    border-bottom:1px solid rgb(211, 211, 211);
+    border-radius:6px;
+  margin: 10px 0px;
+  padding: 15px 6px;
+  text-align:center;
+  list-style-type: none;
+  position:relative;
 }
 
 .heart {

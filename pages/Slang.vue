@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.redb
+  div
     .flags
       img.flag(src="https://www.irelandandbeyond.com/wp-content/uploads/2021/02/flag-ireland-1024x683.jpg.webp"
               @click="makeIreland"
@@ -16,7 +16,7 @@
       b-dropdown-item(@click="makeMisc")  Miscelleanous
       b-dropdown-item(@click="makeFaves")  Favourites
 
-    MyQuote
+    QuotesContainer
 
 </template>
 
@@ -28,12 +28,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'SlangPage',
-
-  data() {
-    return {
-      myvariable: 'random text',
-  }
-  },
 
   computed: {
     state() {
