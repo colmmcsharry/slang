@@ -10,7 +10,7 @@ Footer
 
 .myfooter {
  background-color: $bonkers-footer;
-    color:white;
+    color:pink;
     position:relative;
     bottom:0px;
     width:100%;
