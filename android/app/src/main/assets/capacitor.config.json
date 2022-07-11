@@ -1,0 +1,6 @@
+{
+	"appId": "com.dublinwebdev.app",
+	"appName": "the slang app",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
